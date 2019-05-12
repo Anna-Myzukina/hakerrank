@@ -23,6 +23,25 @@ Each of the next  lines describes a row, , and consists of  space-separated inte
 */
 
 // Complete the diagonalDifference function below.
+// Complete the diagonalDifference function below.
+function diagonalDifference(arr) {
+    let diagonal1 = 0;
+    let diagonal2 = 0;
+    const n = arr[0].length;
+
+    for (var i = 0; i < n; i++) {
+        var j = i;
+        diagonal1 += arr[i][j];
+        var k = n - i - 1;
+        diagonal2 += arr[i][k];
+    }
+
+
+    return Math.abs(diagonal1 - diagonal2);
+}
+
+
+/*
 function diagonalDifference(arr) {
     var LeftToRightDiagonal = [];
     var RightToLeftDiagonal = [];
